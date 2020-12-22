@@ -177,6 +177,7 @@ namespace Spookie_Bois_Modpack_Manager
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(379, 79);
             this.checkedListBox2.TabIndex = 4;
+            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
             // label2
             // 

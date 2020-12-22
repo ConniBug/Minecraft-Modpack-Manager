@@ -22,12 +22,10 @@ namespace Spookie_Bois_Modpack_Manager
             InitializeComponent();
             textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft";
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
-
         void reloadInfomation(CheckedListBox cListBox, GroupBox groupBox, Label modCountLabel, string packName)
         {
             cListBox.Items.Clear();
@@ -44,19 +42,16 @@ namespace Spookie_Bois_Modpack_Manager
                 modCountLabel.Text = i - 1 + " Loaded Mods";
             }
         }
-
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             downloadLocked = true;
             progressBar1.Value = e.ProgressPercentage;
         }
-
         private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             downloadLocked = false;
             MessageBox.Show("The download is completed!");
         }
-
         void downloadMods(string packName)
         {
             if (downloadLocked) {
@@ -75,7 +70,6 @@ namespace Spookie_Bois_Modpack_Manager
            //     client.DownloadFile(@"http://conni.transvibe.club/downloadMods?packID=" + packName, "mods.zip");
             }
         }
-
         void extract(string packName)
         {
             string zipPath = @".\mods.zip";
@@ -95,7 +89,6 @@ namespace Spookie_Bois_Modpack_Manager
 
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -108,12 +101,10 @@ namespace Spookie_Bois_Modpack_Manager
                 MessageBox.Show("This pack doesnt exist on the server please contact the server host asap!"); 
             }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://conni.transvibe.club/clientInfo");
@@ -126,18 +117,15 @@ namespace Spookie_Bois_Modpack_Manager
                 this.Dispose();
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             downloadMods("PogCraft");
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             reloadInfomation(checkedListBox2, groupBox1, label2, "BugCraft");
 
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             downloadMods("BugCraft");
@@ -147,7 +135,15 @@ namespace Spookie_Bois_Modpack_Manager
         {
             string mcPath = textBox1.Text + @"\mods";
             string modsPath = @"./Packs/" + packName + @"/mods";
-            string[] dirs = Directory.GetFiles(modsPath);
+
+            List<string> dirs = new List<string>();
+
+            CheckedListBox.CheckedItemCollection checkedItems = checkedListBox2.CheckedItems;
+
+            foreach ( string name in checkedItems)
+            {
+                dirs.Add(modsPath + "/" + name);
+            }
 
             int Day = DateTime.Today.Day;
             foreach (string path in dirs)
@@ -157,7 +153,15 @@ namespace Spookie_Bois_Modpack_Manager
                     if (path.Contains(".jar"))
                     {
                         string fName = Path.GetFileName(path);
-                        File.Move(path, mcPath + @"\" + fName);
+
+                        try
+                        {
+                            File.Copy(path, mcPath + @"\" + fName);
+                        }
+                        catch (IOException e)
+                        {
+                            Console.WriteLine("Cannot create a file when that file already exists.");
+                        }
                     }
                 }
                 else
@@ -185,7 +189,7 @@ namespace Spookie_Bois_Modpack_Manager
                     // This path is a file
                     if (path.Contains(".jar"))
                     {
-                        if (!Directory.Exists(path + "/old/" + Day + "/"))
+                        if (!Directory.Exists(mcPath + "/old/" + Day + "/"))
                         {
                             Directory.CreateDirectory(mcPath + "/old/" + Day + "/");
                         }
@@ -193,6 +197,10 @@ namespace Spookie_Bois_Modpack_Manager
                         if (!File.Exists(b + @"" + Path.GetFileName(path)))
                         {
                             File.Move(path, b + @"" + Path.GetFileName(path));
+                        }
+                        else
+                        {
+                            File.Delete(path);
                         }
                     }
                 }
@@ -202,7 +210,6 @@ namespace Spookie_Bois_Modpack_Manager
                 }
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             //copyToMc("PogCraft");
@@ -210,7 +217,6 @@ namespace Spookie_Bois_Modpack_Manager
 
             addNewMods("PogCraft");
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             //copyToMc("BugCraft");
@@ -219,19 +225,20 @@ namespace Spookie_Bois_Modpack_Manager
             addNewMods("BugCraft");
 
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             extract("PogCraft");
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             extract("BugCraft");
 
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
