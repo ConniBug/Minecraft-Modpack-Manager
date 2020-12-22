@@ -54,6 +54,9 @@ namespace Spookie_Bois_Modpack_Manager
         }
         void downloadMods(string packName)
         {
+            if(File.Exists(@"./mods.zip"))
+                File.Delete(@"./mods.zip");
+
             if (downloadLocked) {
                 MessageBox.Show("currently downloading another file please wait. (if you believe this is a bug please contact the author.)");
             }
@@ -241,6 +244,36 @@ namespace Spookie_Bois_Modpack_Manager
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+            {
+
+                System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    textBox1.Text = dialog.SelectedPath;
+                }
+
+            }
         }
     }
 }

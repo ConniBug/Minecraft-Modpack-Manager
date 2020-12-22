@@ -45,11 +45,28 @@ namespace Spookie_Bois_Modpack_Manager
             this.button4 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -60,7 +77,7 @@ namespace Spookie_Bois_Modpack_Manager
             this.groupBox2.Controls.Add(this.checkedListBox1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(16, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(517, 121);
             this.groupBox2.TabIndex = 1;
@@ -133,7 +150,7 @@ namespace Spookie_Bois_Modpack_Manager
             this.groupBox1.Controls.Add(this.checkedListBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 139);
+            this.groupBox1.Location = new System.Drawing.Point(16, 146);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(517, 121);
             this.groupBox1.TabIndex = 6;
@@ -200,7 +217,7 @@ namespace Spookie_Bois_Modpack_Manager
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 282);
+            this.progressBar1.Location = new System.Drawing.Point(16, 286);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(516, 23);
             this.progressBar1.TabIndex = 7;
@@ -208,50 +225,180 @@ namespace Spookie_Bois_Modpack_Manager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 266);
+            this.label3.Location = new System.Drawing.Point(13, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Download";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 312);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Extract";
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(13, 328);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(516, 23);
-            this.progressBar2.TabIndex = 10;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 357);
+            this.textBox1.Location = new System.Drawing.Point(12, 340);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(514, 20);
+            this.textBox1.Size = new System.Drawing.Size(521, 20);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = ".minecraft location";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Controls.Add(this.groupBox1);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.progressBar1);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(551, 322);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mod Packs";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.progressBar2);
+            this.groupBox4.Location = new System.Drawing.Point(578, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(551, 322);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Texture Packs";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.button9);
+            this.groupBox5.Controls.Add(this.button10);
+            this.groupBox5.Controls.Add(this.button11);
+            this.groupBox5.Controls.Add(this.checkedListBox3);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.button12);
+            this.groupBox5.Location = new System.Drawing.Point(16, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(517, 121);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Pog Craft";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(89, 46);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(30, 23);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "E";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(15, 75);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(104, 23);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "Copy";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(15, 46);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(68, 23);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Download";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(132, 19);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(379, 79);
+            this.checkedListBox3.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "0 Mods";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(15, 19);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(104, 23);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "Refresh";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Download";
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(16, 286);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(516, 23);
+            this.progressBar2.TabIndex = 7;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 366);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1155, 22);
+            this.statusStrip1.TabIndex = 15;
+            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(372, 17);
+            this.toolStripStatusLabel1.Text = "Discord: Conni!~#0920 - Client Version: 1.0.0.6 - Server Version: 1.0.0.4";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(539, 340);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(24, 20);
+            this.button13.TabIndex = 8;
+            this.button13.Text = "E";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(578, 340);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(45, 20);
+            this.button14.TabIndex = 8;
+            this.button14.Text = "Exit";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 389);
+            this.ClientSize = new System.Drawing.Size(1155, 388);
             this.ControlBox = false;
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -263,6 +410,14 @@ namespace Spookie_Bois_Modpack_Manager
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,9 +441,22 @@ namespace Spookie_Bois_Modpack_Manager
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
 
