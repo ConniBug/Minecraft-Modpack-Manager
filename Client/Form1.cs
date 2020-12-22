@@ -20,7 +20,7 @@ namespace Spookie_Bois_Modpack_Manager
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/.minecraft";
+            textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
