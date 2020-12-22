@@ -81,7 +81,8 @@ namespace Spookie_Bois_Modpack_Manager
             string zipPath = @".\mods.zip";
             string extractPath = @".\Packs\" + packName;
 
-            Directory.Delete(extractPath, true);
+            if(Directory.Exists(extractPath))
+                Directory.Delete(extractPath, true);
             Directory.CreateDirectory(extractPath);
 
             try
@@ -97,7 +98,15 @@ namespace Spookie_Bois_Modpack_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            reloadInfomation(checkedListBox1, groupBox2, label1, "PogCraft");
+            try
+            {
+                reloadInfomation(checkedListBox1, groupBox2, label1, "PogCraft");
+
+            }
+            catch(WebException)
+            {
+                MessageBox.Show("This pack doesnt exist on the server please contact the server host asap!"); 
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
