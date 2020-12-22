@@ -30,20 +30,20 @@ namespace Spookie_Bois_Modpack_Manager
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
@@ -66,6 +66,16 @@ namespace Spookie_Bois_Modpack_Manager
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pog Craft";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(89, 46);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 23);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "E";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
@@ -130,6 +140,16 @@ namespace Spookie_Bois_Modpack_Manager
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bug Craft";
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(89, 48);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(30, 23);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "E";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(15, 75);
@@ -184,26 +204,6 @@ namespace Spookie_Bois_Modpack_Manager
             this.progressBar1.Size = new System.Drawing.Size(516, 23);
             this.progressBar1.TabIndex = 7;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(89, 46);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "E";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(89, 48);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "E";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -236,6 +236,7 @@ namespace Spookie_Bois_Modpack_Manager
             this.textBox1.Size = new System.Drawing.Size(514, 20);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = ".minecraft location";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
