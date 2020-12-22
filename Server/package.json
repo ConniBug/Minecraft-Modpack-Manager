@@ -8,5 +8,9 @@
     "start": "node server.js"
   },
   "author": "Conni Bug - (connithekiwi@gmail.com) Discord: - Conni!~#0920",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "express": "^4.17.1"
+  }
 }
