@@ -386,6 +386,7 @@ namespace Spookie_Bois_Modpack_Manager
             this.button14.TabIndex = 8;
             this.button14.Text = "Exit";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Form1
             // 
