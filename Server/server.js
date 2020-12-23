@@ -1,5 +1,9 @@
 var ownersDiscordTag = "Conni!~#0920";
-var versionNum = "V0.0.1.0b";
+var botVersionNum = "V0.0.1.0b";
+var clientVersionNum = "V1.0.0.0";
+var webServerVersionNum = "V1.0.0.0";
+
+var serverHostname = "http://conni.transvibe.club:80"
 
 const express = require('express');
 const app = express();
@@ -44,11 +48,11 @@ app.get('/downloadMods', (req, res) => {
 });
 
 app.get('/clientInfo', (req, res) => {
-    res.send("V1.0.0.0");
+    res.send(clientVersionNum);
 });
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}!`)
+  console.log(`Listening on port ${port}!`);
 });
  
 //
@@ -84,6 +88,7 @@ client.on("message", async message => {
             })
             .catch(console.error);
     }
+
     if (!message.content.startsWith(prefix)) return;
 
     if (command === 'restart') {
@@ -96,11 +101,13 @@ client.on("message", async message => {
         })
     }
     else if (command === "info") {
-        message.channel.send(`${ownersDiscordTag} - Version: ${versionNum}`);
+        message.channel.send(`${ownersDiscordTag} - Version: ${botVersionNum}`);
     }
-
     else if(command === "packinfo") {
         message.channel.send(modPackInfo(args[0]));
+    }
+    else if(command === "download") {
+        message.channel.send("Download: " + serverHostname + "/downloadMods?packID=" + args[0]);
     }
 });
 
