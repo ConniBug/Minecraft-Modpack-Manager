@@ -22,14 +22,11 @@ namespace Spookie_Bois_Modpack_Manager
             using (var client = new WebClient())
             {
                 WebClient webClient = client;
-                string sourceFile = @"http://conni.transvibe.club/downloadMods?packID=" + packName;
+                string sourceFile = @"http://conni.transvibe.club/clientFile";
                 string destFile = @"./mods.zip";
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
                 webClient.DownloadFileAsync(new Uri(sourceFile), destFile);
-
-
-                //     client.DownloadFile(@"http://conni.transvibe.club/downloadMods?packID=" + packName, "mods.zip");
             }
             InitializeComponent();
             textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft";
